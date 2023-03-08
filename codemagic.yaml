@@ -1,0 +1,41 @@
+workflows:
+  flutter-build-workflow:
+    name: Flutter build
+    instance_type: mac_mini_m1
+    max_build_duration: 60
+    environment:
+      flutter: 3.3.3
+      xcode: latest
+      cocoapods: default
+    cache:
+      cache_paths:
+        - $FLUTTER_ROOT/.pub-cache
+        - ~/.gradle/caches
+        - ~/Library/Caches/CocoaPods
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: '*'
+          include: true
+          source: true
+      cancel_previous_builds: false
+    scripts:
+      - name: Installing Dependencies
+        script: |
+          flutter packages pub get
+      - name: Checking Format
+        script: |
+          dart format --output=none --set-exit-if-changed .
+      - name: Analyzing Code
+        script: |
+          flutter analyze
+    artifacts:
+      - build/**/outputs/apk/**/*.apk
+      - build/**/outputs/bundle/**/*.aab
+      - build/**/outputs/**/mapping.txt
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - build/windows/**/*.msix
+      - flutter_drive.log

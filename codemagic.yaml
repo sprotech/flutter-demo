@@ -12,7 +12,6 @@ definitions:
       name: Installing Dependencies
       script: |
         flutter packages pub get
-        (cd packages/brooklyn_ui && flutter packages pub get)
     - &check_format
       name: Checking Format
       script: |

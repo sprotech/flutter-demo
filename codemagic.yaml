@@ -71,7 +71,7 @@ workflows:
         - keystore_reference_stg
       vars:
         APP_FLAVOR: stg
-        GOOGLE_PLAY_TRACK: alpha
+        GOOGLE_PLAY_TRACK: internal
     triggering:
       events:
         - push

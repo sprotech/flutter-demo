@@ -87,8 +87,7 @@ workflows:
       - *exec_flutter_analyze
       - name: Building Android
         script: |
-          flutter build appbundle --release --flavor stg --dart-define=FLAVOR=stg \
-            --build-number=$PROJECT_BUILD_NUMBER
+          flutter build appbundle --release --build-number=$PROJECT_BUILD_NUMBER
     artifacts:
       - build/**/outputs/bundle/**/*.aab
       - build/**/outputs/**/mapping.txt

@@ -1,4 +1,4 @@
-package com.example.my_app
+package spro.tech.demo01
 
 import io.flutter.embedding.android.FlutterActivity
 

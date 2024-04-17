@@ -21,7 +21,7 @@ jobs:
         uses: actions/labeler@v5
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          config-file: .github/label.yml
+          configuration-path: .github/label.yml
 
       - name: Check if PR is ready for review
         id: check_ready_for_review

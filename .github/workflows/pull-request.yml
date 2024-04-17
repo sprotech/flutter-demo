@@ -21,7 +21,7 @@ jobs:
         uses: actions/labeler@v5
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: .github/label.yml
+          configuration-path: ".github/label.yml"
 
       - name: Auto Assign
         uses: kentaro-m/auto-assign-action@v1.1.0

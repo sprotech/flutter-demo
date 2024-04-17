@@ -1,6 +1,6 @@
 feature:
-  - head-branch: '/feature\/.+/'
+  - head-branch: '^feature\/.+/'
 Refactoring:
-  - head-branch: '/refactor\/.+/'
+  - head-branch: '^refactor\/.+/'
 bug:
-  - head-branch: '/fix\/.+/'
+  - head-branch: '^fix\/.+/'

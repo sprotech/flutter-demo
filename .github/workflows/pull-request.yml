@@ -6,12 +6,10 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   pr_auto_label_and_assign:
-    permissions:
-      contents: read
-      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Add Label

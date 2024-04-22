@@ -6,10 +6,15 @@ addAssignees: true
 
 # A list of reviewers to be added to pull requests (GitHub user name)
 reviewers:
-  - maku-nickellab
+  - flutter-demo-reviewer
 
 # A number of reviewers added to the pull request
 # Set 0 to add all the reviewers (default: 0)
 numberOfReviewers: 0
 
 runOnDraft: true
+
+assignees:
+  - makusho
+  - maku-nickellab
+  
